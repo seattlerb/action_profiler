@@ -1,6 +1,7 @@
 #!/usr/local/bin/ruby
 
 require 'action_profiler'
+require 'action_profiler/profiled_processor'
 
 ActionProfiler::ProfiledProcessor.process_args ARGV
 

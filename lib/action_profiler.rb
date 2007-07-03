@@ -33,7 +33,3 @@ module ActionProfiler
   VERSION = '1.1.0'
 
 end
-
-# This project has lame names.
-require 'action_profiler/profiled_processor'
-

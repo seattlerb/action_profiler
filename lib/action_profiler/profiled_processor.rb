@@ -1,5 +1,7 @@
 require 'optparse'
 
+require 'config/environment'
+require 'application' # HACK Rails can't find this by itself
 require 'action_profiler/test_processor'
 
 def debug(msg)

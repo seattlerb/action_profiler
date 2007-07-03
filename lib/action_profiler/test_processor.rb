@@ -1,6 +1,4 @@
 require 'rubygems'
-require 'action_controller'
-
 require 'action_profiler/path2class'
 
 # :stopdoc:
