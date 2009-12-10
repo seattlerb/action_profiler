@@ -1,6 +1,6 @@
 = Action Profiler
 
-* {action_profiler Documentation}[http://seattlerb.rubyforge.org/action_profiler]
+* http://seattlerb.rubyforge.org/action_profiler
 * {action_profiler Bug Tracker}[http://rubyforge.org/tracker/?func=add&group_id=1513&atid=5921]
 
 == DESCRIPTION:
