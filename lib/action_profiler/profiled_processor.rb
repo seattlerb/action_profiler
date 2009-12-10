@@ -1,8 +1,9 @@
 require 'optparse'
 
 require 'config/environment'
-require 'application' # HACK Rails can't find this by itself
 require 'action_profiler/test_processor'
+
+# HACK remove
 
 def debug(msg)
   $stderr.puts msg if $AP_DEBUG
@@ -29,6 +30,7 @@ class ActionProfiler::ProfiledProcessor < ActionProfiler::TestProcessor
     times = 1
 
     opts = OptionParser.new do |opts|
+      opts.version = ActionProfiler::VERSION
       opts.banner = "Usage: #{File.basename $0} [options] method [params [session [flash]]]"
 
       opts.separator ''
@@ -89,7 +91,6 @@ class ActionProfiler::ProfiledProcessor < ActionProfiler::TestProcessor
     begin
       Dir.chdir app_path
       require 'config/environment'
-      require 'application' # HACK Rails can't find this by itself
     rescue LoadError => e
       debug "Application load error \"#{e.message}\""
       raise OptionParser::InvalidArgument, "could not load application, check your path"
